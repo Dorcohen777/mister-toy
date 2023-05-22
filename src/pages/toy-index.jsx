@@ -26,19 +26,7 @@ export function ToyIndex() {
                })
      }
 
-     function onEditToy(toy) {
-          const price = +prompt('New price?', toy.price)
-          if (!price || price === toy.price) return
-
-          const toyToSave = { ...toy, price }
-          saveToy(toyToSave)
-               .then((savedToy) => {
-                    showSuccessMsg(`Toy updated to price: $${savedToy.price}`)
-               })
-               .catch((err) => {
-                    showErrorMsg('Cannot update toy')
-               })
-     }
+     
 
      return (
           <section>
@@ -47,7 +35,7 @@ export function ToyIndex() {
                     <ToyList
                          toys={toys}
                          onRemoveToy={onRemoveToy}
-                         onEditToy={onEditToy}
+                         
                     />
                </main>
           </section>

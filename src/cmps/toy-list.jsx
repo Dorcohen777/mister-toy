@@ -1,6 +1,6 @@
 import { ToyPreview } from "./toy-preview"
 
-export function ToyList({ toys, onRemoveToy, onEditToy }) {
+export function ToyList({ toys, onRemoveToy,  }) {
     return <ul className="toy-list">
         {toys.map(toy =>
         <li className="toy-preview" key={toy._id}>
@@ -8,7 +8,6 @@ export function ToyList({ toys, onRemoveToy, onEditToy }) {
 
             <div>
                 <button onClick={() => {onRemoveToy(toy._id)}}>x</button>
-                <button onClick={() => {onEditToy(toy)}}>Edit</button>
             </div>
         </li>)}
     </ul>

@@ -5,11 +5,12 @@ const STORAGE_KEY = 'toyDB'
 _createToys() // creating demo data
 
 export const toyService = {
-    query,
-    getById,
-    remove,
-    save,
-    getDefaultFilter,
+     query,
+     getById,
+     remove,
+     save,
+     getDefaultFilter,
+     getEmptyToy,
 }
 
 function query(filterBy = {}) {
@@ -17,6 +18,7 @@ function query(filterBy = {}) {
 }
 
 function getById(toyId) {
+     console.log('from service', toyId)
      return storageService.get(STORAGE_KEY, toyId)
 }
 
@@ -34,6 +36,17 @@ function save(toy) {
 
 function getDefaultFilter() {
      return { name: '', stock: 0 }
+}
+
+function getEmptyToy() {
+     return {
+          _id: '',
+          name: '',
+          price: 0,
+          labels: [],
+          createdAt: Date.now(),
+          inStock: false,
+     }
 }
 
 // *********** Private functions ***********

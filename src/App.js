@@ -7,6 +7,7 @@ import { AboutUs } from './pages/about-page'
 import { ToyIndex } from './pages/toy-index'
 import { AppHeader } from './cmps/app-header'
 import { store } from './store/store'
+import { ToyEdit } from './pages/toy-edit'
 
 export default function App() {
      return (
