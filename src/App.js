@@ -20,6 +20,8 @@ export default function App() {
                                    <Route element={<HomePage />} path='/' />
                                    <Route element={<AboutUs />} path='/about' />
                                    <Route element={<ToyIndex />} path='/toy' />
+                                   <Route element={<ToyEdit/>} path='toy/edit'/>
+                                   <Route element={<ToyEdit/>} path='toy/edit/:toyId'/>
                               </Routes>
                          </main>
                     </section>

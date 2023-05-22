@@ -1,0 +1,36 @@
+.toy-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+    gap: 1em;
+  }
+  
+  .toy-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(205, 158, 232);
+    padding: 1em;
+  }
+  
+  .toy-preview h2 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .toy-preview h3 {
+    margin: 0;
+    font-size: 1em;
+  }
+  
+  .toy-preview h4 {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  
+  .toy-preview p {
+    margin: 0;
+    font-size: 0.8em;
+  }
+  

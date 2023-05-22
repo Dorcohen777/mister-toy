@@ -6,5 +6,6 @@
 @import 'base/base.css';
 @import 'base/helpers.css';
 
-
 /* Components */
+@import 'cmps/toy-list.css';
+@import 'cmps/toy-preview.css';

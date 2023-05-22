@@ -46,6 +46,10 @@ function _createToys() {
           toys.push(_createToy('pokimon', 200, false))
           toys.push(_createToy('lion', 50, true))
           toys.push(_createToy('ball', 100, true))
+          toys.push(_createToy('light magic', 150, true))
+          toys.push(_createToy('laser', 25, true))
+          toys.push(_createToy('puzzle', 70, false))
+          toys.push(_createToy('robot', 100, false))
           utilService.saveToStorage(STORAGE_KEY, toys)
      }
 }
