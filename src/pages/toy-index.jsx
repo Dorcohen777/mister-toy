@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
-import { loadToys, removeToy } from '../store/toy.action'
+import { loadToys, removeToy, saveToy } from '../store/toy.action'
 import { toyService } from '../services/toys-service'
 import { ToyList } from '../cmps/toy-list'
 import { ToyFilter } from '../cmps/toy-filter'
+import { AddToy } from './add-toy'
 
 export function ToyIndex() {
      const [filterBy, setFilterBy] = useState(toyService.getDefaultFilter())
      const toys = useSelector((storeState) => storeState.toyModule.toys)
+     const dispatch = useDispatch()
+     const [isAdd, setIsAdd] = useState(false)
 
      useEffect(() => {
           loadToys(filterBy)
@@ -31,10 +34,22 @@ export function ToyIndex() {
           setFilterBy(filterBy)
      }
 
+     const handleAddToy = (toy) => {
+          dispatch(saveToy(toy))
+               .then(() => {
+                    showSuccessMsg('Toy added')
+               })
+               .catch((err) => {
+                    showErrorMsg('Cannot add toy')
+                    console.log(err)
+               })
+     }
+
      return (
           <section>
                <h1>Toy index</h1>
-
+               <button onClick={() => setIsAdd(!isAdd)}>Add toy</button>
+               {isAdd && <AddToy onAddToy={handleAddToy} />}
                <ToyFilter onSetFilter={onSetFilter} />
                <main>
                     <ToyList toys={toys} onRemoveToy={onRemoveToy} />
