@@ -1,0 +1,40 @@
+.main-nav {
+     background-color: $clr1;
+}
+
+.div-navbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+
+     h2 {
+          color: $clr3;
+          font-size: 24px;
+     }
+}
+
+.nav-links {
+     a {
+          color: $clr5;
+          text-decoration: none;
+          padding: 0 10px;
+          font-weight: 500;
+
+          &.active {
+               color: $clr5;
+               font-weight: 700;
+          }
+
+          &:hover {
+               color: $clr3;
+          }
+     }
+
+     /* Add separator styling between links */
+     a:not(:last-child)::after {
+          content: ' |';
+          margin-left: 10px;
+          color: $clr5;
+          font-weight: 500;
+     }
+}

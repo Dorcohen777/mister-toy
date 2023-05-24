@@ -1,0 +1,61 @@
+.section-homepage {
+     * > button {
+          background-color: $clr3;
+          color: $clr1;
+          padding: 0.7rem;
+          border: none;
+          text-decoration: none;
+          font-weight: 900;
+          transition: 0.3s;
+
+          &:hover {
+               cursor: pointer;
+               background-color: darken($clr3, 10%);
+               transform: scale(1.1);
+          }
+     }
+}
+
+.div-hero-section {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 4rem auto;
+
+     button {
+        margin-top: 1.5rem;
+     }
+
+     h1 {
+          font-size: 2rem;
+     }
+
+     h2 {
+          font-size: 1.2rem;
+     }
+
+     .hero-img {
+          width: 350px;
+     }
+}
+
+.div-homepage-btns {
+     display: flex;
+     justify-content: space-evenly;
+}
+
+// second section in home page (dashboard section)
+.div-homepage-dashboard-section {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 8rem;
+     max-width: 800px;
+     .div-section-dashboard {
+          max-width: 750px;
+     }
+
+     .img-dashboard {
+          width: 1000px;
+     }
+}

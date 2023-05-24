@@ -1,5 +1,6 @@
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
+
 import './assets/style/main.scss' // importing sass main style file
 
 import { HomePage } from './pages/home-page'
@@ -18,7 +19,6 @@ export default function App() {
                     <section className='main-layout'>
                          <AppHeader />
                          <main>
-                              <h1>main app</h1>
                               <Routes>
                                    <Route element={<HomePage />} path='/' />
                                    <Route element={<AboutUs />} path='/about' />

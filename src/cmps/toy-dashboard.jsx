@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import { Pie, Doughnut } from 'react-chartjs-2'
+import { loadToys } from '../store/toy.action'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -12,6 +13,10 @@ export function ToyDashboard() {
      const inventoryCount = []
      const inStockCount = []
      const labels = []
+
+     useEffect(() => {
+          loadToys()
+     }, [])
 
      // for showing the percentage of toys that are in stock by labels
      toys.forEach((toy) => {
