@@ -2,7 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 export function AppHeader() {
      return (
-          <section className='app-header'>
+          <section className=''>
                <h2>Mister-Toys</h2>
                <nav>
                     <NavLink to='/'>Home</NavLink> |
