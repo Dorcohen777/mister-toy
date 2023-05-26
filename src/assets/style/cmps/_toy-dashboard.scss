@@ -1,20 +1,36 @@
-.section-dashboard-charts{
+.section-dashboard-charts {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    align-items: center;
-}
-
-.h1-dashboard-title{
+  
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .h1-dashboard-title {
     font-size: 2.5rem;
     text-align: center;
-}
+  }
+  
+  .div-chart-1,
+  .div-chart-2 {
+    min-width: 500px;
+    max-width: 900px;
+    max-height: 500px;
+  
+    @media (max-width: 1000px) {
+      width: 100%;
+      min-width: unset;
+      max-width: unset;
+      margin-bottom: 2rem;
 
-.div-chart-1{
-    min-width: 500px;
-    max-width: 900px;
-}
-.div-chart-2{
-    min-width: 500px;
-    max-width: 900px;
-}
+      .div-chart-1,
+      .div-chart-2{
+        margin: 3rem 0;
+        text-align: left;
+      }
+    }
+  }
+  

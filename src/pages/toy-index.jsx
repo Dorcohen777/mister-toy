@@ -47,8 +47,8 @@ export function ToyIndex() {
 
      return (
           <section>
-               <h1>Toy index</h1>
-               <button onClick={() => setIsAdd(!isAdd)}>Add toy</button>
+               <h1>Toy store</h1>
+               <button className='btn-style' onClick={() => setIsAdd(!isAdd)}>Create new toy</button>
                {isAdd && <AddToy onAddToy={handleAddToy} />}
                <ToyFilter onSetFilter={onSetFilter} />
                <main>

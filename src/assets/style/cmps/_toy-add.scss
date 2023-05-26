@@ -1,0 +1,22 @@
+.btn-style {
+     padding: 0.5rem;
+     border-radius: 0.3rem;
+     margin-top: 0.5rem;
+     background-color: $clr3;
+     color: $clr1;
+     border: none;
+     text-decoration: none;
+
+     &:hover {
+          cursor: pointer;
+     }
+}
+
+.form-new-toy {
+     label:not(:first-of-type) {
+          margin: 0 0.3rem;
+     }
+     input {
+          margin: 0 0.2rem;
+     }
+}

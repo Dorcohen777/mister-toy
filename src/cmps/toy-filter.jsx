@@ -42,8 +42,8 @@ export function ToyFilter({ onSetFilter }) {
 
      return (
           <section className='toy-filter'>
-               <h2>Toys Filter</h2>
-               <form onSubmit={onSubmitFilter}>
+               <h2> Filter</h2>
+               <form onSubmit={onSubmitFilter} className='form-filter'>
                     <label htmlFor='name'>Name:</label>
                     <input
                          type='text'

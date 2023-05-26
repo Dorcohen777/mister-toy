@@ -14,7 +14,10 @@
                transform: scale(1.1);
           }
      }
+     
+     
 }
+
 
 .div-hero-section {
      display: flex;
@@ -37,6 +40,8 @@
      .hero-img {
           width: 350px;
      }
+
+     
 }
 
 .div-homepage-btns {
@@ -50,12 +55,22 @@
      align-items: center;
      justify-content: center;
      margin-top: 8rem;
-     max-width: 800px;
      .div-section-dashboard {
           max-width: 750px;
      }
 
      .img-dashboard {
           width: 1000px;
+     }
+}
+
+
+@media (max-width: 750px){
+     .div-hero-section, .div-homepage-dashboard-section{
+          display: flex;
+          flex-direction: column;
+     }
+     .button-link{
+          margin-bottom: 2rem;
      }
 }

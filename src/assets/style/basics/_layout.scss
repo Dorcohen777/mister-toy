@@ -1,6 +1,6 @@
 .main-layout {
      display: grid;
-     grid-template-columns: minmax(20px,1fr) minmax(auto,1100px) minmax(20px,1fr);
+     grid-template-columns: minmax(20px,1fr) minmax(auto,1110px) minmax(20px,1fr);
 
      > * {
           grid-column: 2;
@@ -9,4 +9,12 @@
      > *.full {
           grid-column: 1 / -1;
      }
+
+     @media (max-width: 1250px) {
+          grid-template-columns: minmax(20px,1fr) minmax(auto,900px) minmax(20px,1fr);
+     }
+     @media (max-width: 1000px) {
+          grid-template-columns: minmax(20px,1fr) minmax(auto,700px) minmax(20px,1fr);
+     }
+     
 }

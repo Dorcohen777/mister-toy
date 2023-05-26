@@ -52,8 +52,8 @@ export function AddToy({ onAddToy }) {
      };
 
      return (
-          <form onSubmit={handleSubmit}>
-               <h2>Add Toy</h2>
+          <form onSubmit={handleSubmit} className='form-new-toy'>
+               <h2>Fill new toy details</h2>
                <label>
                     Name:
                     <input
@@ -90,7 +90,7 @@ export function AddToy({ onAddToy }) {
                          onChange={handleCheckboxChange}
                     />
                </label>
-               <button type='submit'>Add Toy</button>
+               <button className='btn-style' type='submit'>Add</button>
           </form>
      );
 }

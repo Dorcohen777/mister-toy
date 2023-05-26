@@ -1,0 +1,26 @@
+.toy-filter {
+     display: flex;
+     align-items: center;
+}
+
+.form-filter {
+     label {
+          font-weight: bold;
+          margin: 0 0.5rem;
+     }
+
+     input,
+     select {
+          padding: 0.2rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 1rem;
+     }
+
+     input[type='checkbox'] {
+          width: auto;
+          margin-left: 0.5rem;
+     }
+
+     
+}

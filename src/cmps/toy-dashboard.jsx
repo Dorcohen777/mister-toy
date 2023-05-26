@@ -114,11 +114,11 @@ export function ToyDashboard() {
                <section className='section-dashboard-charts'>
                     <div className='div-chart-1'>
                          <h2>Prices per label</h2>
-                         <Pie data={dataPricePerLabel} />
+                         <Pie data={dataPricePerLabel} responsive maintainAspectRatio={false} />
                     </div>
                     <div className='div-chart-2'>
                          <h2>percentage of toys that are in stock by labels</h2>
-                         <Doughnut data={dataPercentage} />
+                         <Doughnut data={dataPercentage} responsive maintainAspectRatio={false}/>
                     </div>
                </section>
           </section>
