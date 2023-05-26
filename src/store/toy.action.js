@@ -6,7 +6,6 @@ export function loadToys(filterBy) {
      return toyService
           .query(filterBy)
           .then((toys) => {
-               console.log('from front', toys)
                store.dispatch({ type: SET_TOYS, toys })
           })
           .catch((err) => {

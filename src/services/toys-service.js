@@ -41,7 +41,7 @@ function save(toy) {
 }
 
 function getDefaultFilter() {
-     return { name: '', price: 0 }
+     return { name: '', price: 0, inStock: '', label: ''}
 }
 
 function getEmptyToy() {
