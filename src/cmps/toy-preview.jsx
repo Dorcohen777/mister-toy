@@ -39,11 +39,11 @@ export function ToyPreview({ toy }) {
      return (
           <article>
                <h2>Name: {toy.name}</h2>
-               {/* <img
+               <img
                     src={require(`../assets/img/${imageName}.jpg`)}
                     onError={(e) => {e.target.onerror = null; e.target.src = deafaultImg}}
                     alt={toy.name}
-               /> */}
+               />
                <h3>{toy.price}$</h3>
                <h4>{checkStock}</h4>
                <hr />
