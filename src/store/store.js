@@ -1,9 +1,11 @@
 import { combineReducers, legacy_createStore as createStore } from 'redux'
 
 import { toyReducer } from './toy.reducer'
+import { userReducer } from './user.reducer.js'
 
 const rootReducer = combineReducers({
      toyModule: toyReducer,
+     userModule: userReducer
 })
 
 export const store = createStore(rootReducer)

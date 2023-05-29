@@ -18,37 +18,36 @@ export function ToyIndex() {
           loadToys(filterBy)
      }, [filterBy])
 
-     function onRemoveToy(toyId) {
-          removeToy(toyId)
-               .then(() => {
-                    showSuccessMsg('Toy removed')
-               })
-               .catch((err) => {
-                    showErrorMsg('Cannot remove toy')
-                    console.log(err)
-               })
+     async function onRemoveToy(toyId) {
+          try {
+               await removeToy(toyId)
+               showSuccessMsg('Toy removed')
+          } catch (err) {
+               showErrorMsg('Cannot remove toy')
+               console.log(err)
+          }
      }
 
      function onSetFilter(filterBy) {
-          console.log(filterBy)
           setFilterBy(filterBy)
      }
 
-     const handleAddToy = (toy) => {
-          dispatch(saveToy(toy))
-               .then(() => {
-                    showSuccessMsg('Toy added')
-               })
-               .catch((err) => {
-                    showErrorMsg('Cannot add toy')
-                    console.log(err)
-               })
+     async function handleAddToy(toy) {
+          try {
+               await saveToy(toy)
+               showSuccessMsg('Toy added')
+          } catch (err) {
+               showErrorMsg('Cannot add toy')
+               console.log(err)
+          }
      }
 
      return (
           <section>
                <h1>Toy store</h1>
-               <button className='btn-style' onClick={() => setIsAdd(!isAdd)}>Create new toy</button>
+               <button className='btn-style' onClick={() => setIsAdd(!isAdd)}>
+                    Create new toy
+               </button>
                {isAdd && <AddToy onAddToy={handleAddToy} />}
                <ToyFilter onSetFilter={onSetFilter} />
                <main>

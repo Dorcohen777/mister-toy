@@ -16,7 +16,10 @@ export function ToyEdit() {
      function loadToy() {
           toyService
                .getById(toyId)
-               .then((toy) => setToyToEdit(toy))
+               .then((toy) => {
+                    setToyToEdit(toy)
+                    console.log(toyToEdit)
+               })
                .catch((err) => {
                     console.log('Had issues in toy details', err)
                     navigate('/toy')

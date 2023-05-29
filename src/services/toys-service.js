@@ -13,6 +13,8 @@ export const toyService = {
      save,
      getDefaultFilter,
      getEmptyToy,
+     saveMsg,
+     saveReview,
 }
 
 function query(filterBy = {}) {
@@ -33,15 +35,23 @@ function remove(toyId) {
 function save(toy) {
      if (toy._id) {
           // return storageService.put(STORAGE_KEY, toy)
-          return httpService.put(BASE_URL, toy)
+          return httpService.put(BASE_URL + toy._id, toy)
      } else {
           // return storageService.post(STORAGE_KEY, toy)
           return httpService.post(BASE_URL, toy)
      }
 }
+// for new toy message
+function saveMsg(toy, msg) {
+     return httpService.post(BASE_URL + toy._id + '/msg', msg)
+}
+// for adding new toy review
+function saveReview(review) {
+     return httpService.post('review/', review)
+}
 
 function getDefaultFilter() {
-     return { name: '', price: 0, inStock: '', label: ''}
+     return { name: '', price: 0, inStock: '', label: '' }
 }
 
 function getEmptyToy() {
@@ -50,6 +60,7 @@ function getEmptyToy() {
           name: '',
           price: 0,
           labels: [],
+          msgs: [], // Initialize msgs as an empty array
           createdAt: Date.now(),
           inStock: false,
      }
